@@ -1,0 +1,11 @@
+$ psql -U santhosh -d presidio -f commands.sql
+
+CREATE TABLE
+INSERT 0 4
+ register_number | first_name | last_name | department 
+-----------------+------------+-----------+------------
+               1 | Santhosh   | Kannan    | ADS
+               2 | Varun      | Kumar     | CSE
+               3 | Ram        | Srivatsa  | ADS
+               4 | Deepak     | S         | AML
+(4 rows)
