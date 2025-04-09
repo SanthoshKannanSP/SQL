@@ -1,0 +1,50 @@
+$ psql -U santhosh -d presidio -f commands.sql -W
+
+CREATE TABLE
+INSERT 0 10
+ employee_id | first_name | last_name |     position      |  salary  
+-------------+------------+-----------+-------------------+----------
+           1 | Alice      | Johnson   | Software Engineer | 85000.00
+           2 | Bob        | Smith     | Product Manager   | 95000.00
+           3 | Charlie    | Lee       | Data Analyst      | 72000.00
+           4 | Diana      | Evans     | Software Engineer | 68000.00
+           5 | Ethan      | Wright    | Product Manager   | 88000.00
+           6 | Fiona      | Garcia    | Data Analyst      | 71000.00
+           7 | George     | Harris    | Software Engineer | 64000.00
+           8 | Hannah     | Brown     | Product Manager   | 60000.00
+           9 | Ian        | Taylor    | Data Analyst      | 79000.00
+          10 | Jasmine    | Nguyen    | Software Engineer | 73000.00
+(10 rows)
+
+ employee_id | first_name | last_name |     position      |  salary  
+-------------+------------+-----------+-------------------+----------
+           1 | Alice      | Johnson   | Software Engineer | 85000.00
+           4 | Diana      | Evans     | Software Engineer | 68000.00
+           7 | George     | Harris    | Software Engineer | 64000.00
+          10 | Jasmine    | Nguyen    | Software Engineer | 73000.00
+(4 rows)
+
+ employee_id | first_name | last_name |    position     |  salary  
+-------------+------------+-----------+-----------------+----------
+           2 | Bob        | Smith     | Product Manager | 95000.00
+           5 | Ethan      | Wright    | Product Manager | 88000.00
+(2 rows)
+
+ employee_id | first_name | last_name |     position      |  salary  
+-------------+------------+-----------+-------------------+----------
+           6 | Fiona      | Garcia    | Data Analyst      | 71000.00
+           3 | Charlie    | Lee       | Data Analyst      | 72000.00
+           9 | Ian        | Taylor    | Data Analyst      | 79000.00
+           1 | Alice      | Johnson   | Software Engineer | 85000.00
+           5 | Ethan      | Wright    | Product Manager   | 88000.00
+           2 | Bob        | Smith     | Product Manager   | 95000.00
+(6 rows)
+
+ employee_id | first_name | last_name |     position      |  salary  
+-------------+------------+-----------+-------------------+----------
+           2 | Bob        | Smith     | Product Manager   | 95000.00
+           5 | Ethan      | Wright    | Product Manager   | 88000.00
+           1 | Alice      | Johnson   | Software Engineer | 85000.00
+           9 | Ian        | Taylor    | Data Analyst      | 79000.00
+           8 | Hannah     | Brown     | Product Manager   | 60000.00
+(5 rows)
