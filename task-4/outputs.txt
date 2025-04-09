@@ -1,0 +1,121 @@
+$ psql -U santhosh -d presidio -f commands.sql -W
+
+CREATE TABLE
+CREATE TABLE
+INSERT 0 5
+INSERT 0 20
+ customer_id |      name      | phone_number 
+-------------+----------------+--------------
+           1 | Alice Thompson | 555-1234
+           2 | Brian Carter   | 555-5678
+           3 | Chloe Martinez | 555-8765
+           4 | David Kim      | 555-4321
+           5 | Reed Richards  | 555-1234
+(5 rows)
+
+ order_id | customer_id |   product_name    | price  | delivery_date 
+----------+-------------+-------------------+--------+---------------
+        1 |           1 | Wireless Mouse    |  25.99 | 2025-04-01
+        2 |           1 | Bluetooth Speaker |  45.75 | 2025-04-02
+        3 |           1 | Gaming Chair      | 199.99 | 2025-04-03
+        4 |           1 | Laptop Stand      |  29.99 | 2025-04-04
+        5 |           1 | Yoga Mat          |  22.00 | 2025-04-05
+        6 |           1 | USB-C Charger     |  18.49 | 2025-04-06
+        7 |           2 | Wireless Mouse    |  25.99 | 2025-04-02
+        8 |           2 | Bluetooth Speaker |  45.75 | 2025-04-03
+        9 |           2 | Gaming Chair      | 199.99 | 2025-04-04
+       10 |           2 | Laptop Stand      |  29.99 | 2025-04-05
+       11 |           2 | Yoga Mat          |  22.00 | 2025-04-06
+       12 |           3 | USB-C Charger     |  18.49 | 2025-04-03
+       13 |           3 | Wireless Mouse    |  25.99 | 2025-04-04
+       14 |           3 | Bluetooth Speaker |  45.75 | 2025-04-05
+       15 |           3 | Gaming Chair      | 199.99 | 2025-04-06
+       16 |           3 | Laptop Stand      |  29.99 | 2025-04-07
+       17 |           4 | Yoga Mat          |  22.00 | 2025-04-05
+       18 |           4 | USB-C Charger     |  18.49 | 2025-04-06
+       19 |           4 | Wireless Mouse    |  25.99 | 2025-04-07
+       20 |           4 | Bluetooth Speaker |  45.75 | 2025-04-08
+(20 rows)
+
+      name      |   product_name    | delivery_date 
+----------------+-------------------+---------------
+ Alice Thompson | Wireless Mouse    | 2025-04-01
+ Alice Thompson | Bluetooth Speaker | 2025-04-02
+ Alice Thompson | Gaming Chair      | 2025-04-03
+ Alice Thompson | Laptop Stand      | 2025-04-04
+ Alice Thompson | Yoga Mat          | 2025-04-05
+ Alice Thompson | USB-C Charger     | 2025-04-06
+ Brian Carter   | Wireless Mouse    | 2025-04-02
+ Brian Carter   | Bluetooth Speaker | 2025-04-03
+ Brian Carter   | Gaming Chair      | 2025-04-04
+ Brian Carter   | Laptop Stand      | 2025-04-05
+ Brian Carter   | Yoga Mat          | 2025-04-06
+ Chloe Martinez | USB-C Charger     | 2025-04-03
+ Chloe Martinez | Wireless Mouse    | 2025-04-04
+ Chloe Martinez | Bluetooth Speaker | 2025-04-05
+ Chloe Martinez | Gaming Chair      | 2025-04-06
+ Chloe Martinez | Laptop Stand      | 2025-04-07
+ David Kim      | Yoga Mat          | 2025-04-05
+ David Kim      | USB-C Charger     | 2025-04-06
+ David Kim      | Wireless Mouse    | 2025-04-07
+ David Kim      | Bluetooth Speaker | 2025-04-08
+(20 rows)
+
+      name      |   product_name    
+----------------+-------------------
+ Alice Thompson | Wireless Mouse
+ Alice Thompson | Bluetooth Speaker
+ Alice Thompson | Gaming Chair
+ Alice Thompson | Laptop Stand
+ Alice Thompson | Yoga Mat
+ Alice Thompson | USB-C Charger
+ Brian Carter   | Wireless Mouse
+ Brian Carter   | Bluetooth Speaker
+ Brian Carter   | Gaming Chair
+ Brian Carter   | Laptop Stand
+ Brian Carter   | Yoga Mat
+ Chloe Martinez | USB-C Charger
+ Chloe Martinez | Wireless Mouse
+ Chloe Martinez | Bluetooth Speaker
+ Chloe Martinez | Gaming Chair
+ Chloe Martinez | Laptop Stand
+ David Kim      | Yoga Mat
+ David Kim      | USB-C Charger
+ David Kim      | Wireless Mouse
+ David Kim      | Bluetooth Speaker
+ Reed Richards  | 
+(21 rows)
+
+      name      |   product_name    
+----------------+-------------------
+ Alice Thompson | Wireless Mouse
+ Alice Thompson | Bluetooth Speaker
+ Alice Thompson | Gaming Chair
+ Alice Thompson | Laptop Stand
+ Alice Thompson | Yoga Mat
+ Alice Thompson | USB-C Charger
+ Brian Carter   | Wireless Mouse
+ Brian Carter   | Bluetooth Speaker
+ Brian Carter   | Gaming Chair
+ Brian Carter   | Laptop Stand
+ Brian Carter   | Yoga Mat
+ Chloe Martinez | USB-C Charger
+ Chloe Martinez | Wireless Mouse
+ Chloe Martinez | Bluetooth Speaker
+ Chloe Martinez | Gaming Chair
+ Chloe Martinez | Laptop Stand
+ David Kim      | Yoga Mat
+ David Kim      | USB-C Charger
+ David Kim      | Wireless Mouse
+ David Kim      | Bluetooth Speaker
+(20 rows)
+
+      name      |   product_name    | delivery_date 
+----------------+-------------------+---------------
+ Alice Thompson | Wireless Mouse    | 2025-04-01
+ Alice Thompson | Bluetooth Speaker | 2025-04-02
+ Alice Thompson | Gaming Chair      | 2025-04-03
+ Brian Carter   | Wireless Mouse    | 2025-04-02
+ Brian Carter   | Bluetooth Speaker | 2025-04-03
+ Chloe Martinez | USB-C Charger     | 2025-04-03
+(6 rows)
