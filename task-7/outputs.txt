@@ -1,0 +1,114 @@
+$ psql -U santhosh -d presidio -f commands.sql -W
+
+CREATE TABLE
+INSERT 0 20
+        product_name         | price | max 
+-----------------------------+-------+-----
+ Smartwatch                  |   200 | 200
+ Smartwatch                  |   190 | 200
+ Smartwatch                  |   180 | 200
+ Smartwatch                  |   200 | 200
+ Smartwatch                  |   160 | 200
+ Noise Cancelling Headphones |   300 | 300
+ Noise Cancelling Headphones |   280 | 300
+ Noise Cancelling Headphones |   270 | 300
+ Noise Cancelling Headphones |   280 | 300
+ Noise Cancelling Headphones |   250 | 300
+ Electric Toothbrush         |    90 |  90
+ Electric Toothbrush         |    85 |  90
+ Electric Toothbrush         |    80 |  90
+ Electric Toothbrush         |    75 |  90
+ Electric Toothbrush         |    70 |  90
+ Fitness Tracker             |   150 | 150
+ Fitness Tracker             |   140 | 150
+ Fitness Tracker             |   130 | 150
+ Fitness Tracker             |   120 | 150
+ Fitness Tracker             |   110 | 150
+(20 rows)
+
+        product_name         | price | modified_date 
+-----------------------------+-------+---------------
+ Smartwatch                  |   160 | 2024-05-30
+ Smartwatch                  |   200 | 2024-04-25
+ Noise Cancelling Headphones |   250 | 2024-06-01
+ Noise Cancelling Headphones |   280 | 2024-04-28
+ Electric Toothbrush         |    70 | 2024-06-05
+ Electric Toothbrush         |    75 | 2024-04-29
+ Fitness Tracker             |   110 | 2024-06-07
+ Fitness Tracker             |   120 | 2024-05-01
+(8 rows)
+
+        product_name         | price | modified_date 
+-----------------------------+-------+---------------
+ Smartwatch                  |   200 | 2024-01-10
+ Smartwatch                  |   200 | 2024-04-25
+ Noise Cancelling Headphones |   300 | 2024-01-12
+ Noise Cancelling Headphones |   280 | 2024-02-18
+ Noise Cancelling Headphones |   280 | 2024-04-28
+ Electric Toothbrush         |    90 | 2024-01-15
+ Electric Toothbrush         |    85 | 2024-02-19
+ Fitness Tracker             |   150 | 2024-01-17
+ Fitness Tracker             |   140 | 2024-02-21
+(9 rows)
+
+        product_name         | price | modified_date 
+-----------------------------+-------+---------------
+ Smartwatch                  |   200 | 2024-01-10
+ Smartwatch                  |   200 | 2024-04-25
+ Smartwatch                  |   190 | 2024-02-15
+ Noise Cancelling Headphones |   300 | 2024-01-12
+ Noise Cancelling Headphones |   280 | 2024-02-18
+ Noise Cancelling Headphones |   280 | 2024-04-28
+ Electric Toothbrush         |    90 | 2024-01-15
+ Electric Toothbrush         |    85 | 2024-02-19
+ Fitness Tracker             |   150 | 2024-01-17
+ Fitness Tracker             |   140 | 2024-02-21
+(10 rows)
+
+        product_name         | price | lag 
+-----------------------------+-------+-----
+ Smartwatch                  |   200 |    
+ Smartwatch                  |   190 | 200
+ Smartwatch                  |   180 | 190
+ Smartwatch                  |   200 | 180
+ Smartwatch                  |   160 | 200
+ Noise Cancelling Headphones |   300 |    
+ Noise Cancelling Headphones |   280 | 300
+ Noise Cancelling Headphones |   270 | 280
+ Noise Cancelling Headphones |   280 | 270
+ Noise Cancelling Headphones |   250 | 280
+ Electric Toothbrush         |    90 |    
+ Electric Toothbrush         |    85 |  90
+ Electric Toothbrush         |    80 |  85
+ Electric Toothbrush         |    75 |  80
+ Electric Toothbrush         |    70 |  75
+ Fitness Tracker             |   150 |    
+ Fitness Tracker             |   140 | 150
+ Fitness Tracker             |   130 | 140
+ Fitness Tracker             |   120 | 130
+ Fitness Tracker             |   110 | 120
+(20 rows)
+
+        product_name         | price | lead 
+-----------------------------+-------+------
+ Smartwatch                  |   200 |  190
+ Smartwatch                  |   190 |  180
+ Smartwatch                  |   180 |  200
+ Smartwatch                  |   200 |  160
+ Smartwatch                  |   160 |     
+ Noise Cancelling Headphones |   300 |  280
+ Noise Cancelling Headphones |   280 |  270
+ Noise Cancelling Headphones |   270 |  280
+ Noise Cancelling Headphones |   280 |  250
+ Noise Cancelling Headphones |   250 |     
+ Electric Toothbrush         |    90 |   85
+ Electric Toothbrush         |    85 |   80
+ Electric Toothbrush         |    80 |   75
+ Electric Toothbrush         |    75 |   70
+ Electric Toothbrush         |    70 |     
+ Fitness Tracker             |   150 |  140
+ Fitness Tracker             |   140 |  130
+ Fitness Tracker             |   130 |  120
+ Fitness Tracker             |   120 |  110
+ Fitness Tracker             |   110 |     
+(20 rows)
