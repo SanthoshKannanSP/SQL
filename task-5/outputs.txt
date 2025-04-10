@@ -1,0 +1,95 @@
+$ psql -U santhosh -d presidio -f commands.sql -W
+
+CREATE TABLE
+INSERT 0 20
+ celebrity_id |     name     | salary | movie_count | gender 
+--------------+--------------+--------+-------------+--------
+            1 | Ava Monroe   |   9500 |          18 | Female
+            2 | Jaxon Rivera |   8700 |          22 | Male
+            3 | Luna Hart    |   7800 |          15 | Female
+            4 | Kai Bennett  |   6400 |           9 | Male
+            5 | Zara Quinn   |   5200 |           7 | Female
+            6 | Leo Zhang    |   9900 |          25 | Male
+            7 | Noah Kim     |   8850 |          20 | Male
+            8 | Maya Patel   |   7300 |          13 | Female
+            9 | Dante Cruz   |   6150 |          10 | Male
+           10 | Rhea Sato    |   6950 |          12 | Female
+           11 | Ezra Black   |   5400 |           8 | Male
+           12 | Nia Fox      |   8100 |          19 | Female
+           13 | Arjun Mehta  |   7600 |          16 | Male
+           14 | Isla Novak   |   7050 |          14 | Female
+           15 | Theo Lane    |   6300 |          11 | Male
+           16 | Camila Stone |   6700 |           9 | Female
+           17 | Miles Jordan |   4800 |           6 | Male
+           18 | Elena Ruiz   |   6900 |          10 | Female
+           19 | Omar Youssef |   5750 |           7 | Male
+           20 | Sky Taylor   |   4300 |           5 | Female
+(20 rows)
+
+     name     | salary 
+--------------+--------
+ Ava Monroe   |   9500
+ Jaxon Rivera |   8700
+ Luna Hart    |   7800
+ Leo Zhang    |   9900
+ Noah Kim     |   8850
+ Maya Patel   |   7300
+ Nia Fox      |   8100
+ Arjun Mehta  |   7600
+ Isla Novak   |   7050
+(9 rows)
+
+     name     | salary |  avg   
+--------------+--------+--------
+ Ava Monroe   |   9500 | 6982.5
+ Jaxon Rivera |   8700 | 6982.5
+ Luna Hart    |   7800 | 6982.5
+ Kai Bennett  |   6400 | 6982.5
+ Zara Quinn   |   5200 | 6982.5
+ Leo Zhang    |   9900 | 6982.5
+ Noah Kim     |   8850 | 6982.5
+ Maya Patel   |   7300 | 6982.5
+ Dante Cruz   |   6150 | 6982.5
+ Rhea Sato    |   6950 | 6982.5
+ Ezra Black   |   5400 | 6982.5
+ Nia Fox      |   8100 | 6982.5
+ Arjun Mehta  |   7600 | 6982.5
+ Isla Novak   |   7050 | 6982.5
+ Theo Lane    |   6300 | 6982.5
+ Camila Stone |   6700 | 6982.5
+ Miles Jordan |   4800 | 6982.5
+ Elena Ruiz   |   6900 | 6982.5
+ Omar Youssef |   5750 | 6982.5
+ Sky Taylor   |   4300 | 6982.5
+(20 rows)
+
+     name     | salary 
+--------------+--------
+ Ava Monroe   |   9500
+ Jaxon Rivera |   8700
+ Luna Hart    |   7800
+ Leo Zhang    |   9900
+ Noah Kim     |   8850
+ Maya Patel   |   7300
+ Nia Fox      |   8100
+ Arjun Mehta  |   7600
+ Isla Novak   |   7050
+(9 rows)
+
+ max  
+------
+ 6985
+(1 row)
+
+     name     | gender | salary 
+--------------+--------+--------
+ Ava Monroe   | Female |   9500
+ Jaxon Rivera | Male   |   8700
+ Luna Hart    | Female |   7800
+ Leo Zhang    | Male   |   9900
+ Noah Kim     | Male   |   8850
+ Maya Patel   | Female |   7300
+ Nia Fox      | Female |   8100
+ Arjun Mehta  | Male   |   7600
+ Isla Novak   | Female |   7050
+(9 rows)
