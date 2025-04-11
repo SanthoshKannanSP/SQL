@@ -1,0 +1,152 @@
+$ psql -U santhosh -d presidio -f commands.sql -W
+
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+INSERT 0 5
+INSERT 0 10
+INSERT 0 32
+CREATE FUNCTION
+CREATE TRIGGER
+CREATE FUNCTION
+CREATE TRIGGER
+
+ author_id |       author_name        |                                 author_bio                                  | author_rating 
+-----------+--------------------------+-----------------------------------------------------------------------------+---------------
+         1 | J.K. Rowling             | British author best known for the Harry Potter series.                      |           4.8
+         2 | George R.R. Martin       | American novelist and short story writer, known for A Song of Ice and Fire. |           4.5
+         3 | Chimamanda Ngozi Adichie | Nigerian writer and feminist, known for Half of a Yellow Sun.               |           4.7
+         4 | Haruki Murakami          | Japanese author of surreal fiction.                                         |           4.6
+         5 | Yuval Noah Harari        | Historian and author of Sapiens and Homo Deus.                              |           4.4
+(5 rows)
+
+book_id |               book_title                | book_author_id | book_price | book_rating 
+---------+-----------------------------------------+----------------+------------+-------------
+       1 | Harry Potter and the Sorcerer's Stone   |              1 |      19.99 |         4.9
+       2 | Harry Potter and the Chamber of Secrets |              1 |      18.99 |         4.8
+       3 | A Game of Thrones                       |              2 |      22.50 |         4.7
+       4 | A Clash of Kings                        |              2 |      21.00 |         4.6
+       5 | Half of a Yellow Sun                    |              3 |      17.75 |         4.8
+       6 | Americanah                              |              3 |      16.40 |         4.6
+       7 | Norwegian Wood                          |              4 |      14.30 |         4.5
+       8 | Kafka on the Shore                      |              4 |      15.50 |         4.6
+       9 | Sapiens: A Brief History of Humankind   |              5 |      24.99 |         4.9
+      10 | Homo Deus: A Brief History of Tomorrow  |              5 |      23.75 |         4.7
+(10 rows)
+
+review_id | review_book_id | review_rating |                 review_description                 
+-----------+----------------+---------------+----------------------------------------------------
+         1 |              1 |           5.0 | Absolutely magical, loved every bit of it!
+         2 |              1 |           4.5 | Great start to the series, a bit childish but fun.
+         3 |              2 |           4.7 | Even better than the first book.
+         4 |              3 |           4.8 | Epic fantasy and amazing character development.
+         5 |              3 |           4.6 | Slow to start but totally worth it.
+         6 |              4 |           4.5 | Fantastic continuation, intense and immersive.
+         7 |              5 |           4.9 | Heartbreaking and beautifully written.
+         8 |              6 |           4.7 | Deep, funny, and powerful.
+         9 |              7 |           4.4 | Melancholic and nostalgic.
+        10 |              8 |           4.5 | Beautiful and strange, classic Murakami.
+        11 |              9 |           5.0 | Mind-blowing perspective on history and evolution.
+        12 |             10 |           4.6 | Thought-provoking and a great sequel.
+        13 |              1 |           4.8 | My kids and I loved it. Great family reading.
+        14 |              1 |           4.2 | Enjoyable, but the hype made me expect more.
+        15 |              2 |           4.9 | A thrilling continuation of the story.
+        16 |              2 |           3.9 | Good but too similar to the first book.
+        17 |              3 |           5.0 | Incredible world-building and twists.
+        18 |              3 |           4.3 | Long, but worth the investment.
+        19 |              4 |           4.0 | Some slow parts but still strong.
+        20 |              4 |           3.8 | Too many characters to keep track of.
+        21 |              5 |           5.0 | Emotionally powerful and well-written.
+        22 |              5 |           4.4 | A masterpiece with rich storytelling.
+        23 |              6 |           4.6 | Sharp, honest, and important.
+        24 |              6 |           4.0 | Some pacing issues, but a great read.
+        25 |              7 |           4.7 | Beautiful and melancholic.
+        26 |              7 |           4.1 | Not for everyone, but I liked it.
+        27 |              8 |           4.8 | Mind-bending and poetic.
+        28 |              8 |           3.9 | Confusing at times, but interesting.
+        29 |              9 |           4.9 | Should be required reading for everyone.
+        30 |              9 |           4.7 | Brilliant synthesis of history.
+        31 |             10 |           4.8 | Fascinating ideas about the future.
+        32 |             10 |           4.2 | Less engaging than Sapiens but still great.
+(32 rows)
+
+author_id |       author_name        |                                 author_bio                                  | author_rating 
+-----------+--------------------------+-----------------------------------------------------------------------------+---------------
+         1 | J.K. Rowling             | British author best known for the Harry Potter series.                      |           4.8
+         3 | Chimamanda Ngozi Adichie | Nigerian writer and feminist, known for Half of a Yellow Sun.               |           4.7
+         4 | Haruki Murakami          | Japanese author of surreal fiction.                                         |           4.6
+         5 | Yuval Noah Harari        | Historian and author of Sapiens and Homo Deus.                              |           4.4
+         2 | George R.R. Martin       | American novelist and short story writer, known for A Song of Ice and Fire. |           4.2
+(5 rows)
+
+book_id |               book_title                | book_author_id | book_price | book_rating 
+---------+-----------------------------------------+----------------+------------+-------------
+       1 | Harry Potter and the Sorcerer's Stone   |              1 |      19.99 |         4.9
+       2 | Harry Potter and the Chamber of Secrets |              1 |      18.99 |         4.8
+       3 | A Game of Thrones                       |              2 |      22.50 |         4.7
+       5 | Half of a Yellow Sun                    |              3 |      17.75 |         4.8
+       6 | Americanah                              |              3 |      16.40 |         4.6
+       7 | Norwegian Wood                          |              4 |      14.30 |         4.5
+       8 | Kafka on the Shore                      |              4 |      15.50 |         4.6
+       9 | Sapiens: A Brief History of Humankind   |              5 |      24.99 |         4.9
+      10 | Homo Deus: A Brief History of Tomorrow  |              5 |      23.75 |         4.7
+       4 | A Clash of Kings                        |              2 |      21.00 |         3.6
+(10 rows)
+
+review_id | review_book_id | review_rating |                 review_description                 
+-----------+----------------+---------------+----------------------------------------------------
+         1 |              1 |           5.0 | Absolutely magical, loved every bit of it!
+         2 |              1 |           4.5 | Great start to the series, a bit childish but fun.
+         3 |              2 |           4.7 | Even better than the first book.
+         4 |              3 |           4.8 | Epic fantasy and amazing character development.
+         5 |              3 |           4.6 | Slow to start but totally worth it.
+         6 |              4 |           4.5 | Fantastic continuation, intense and immersive.
+         7 |              5 |           4.9 | Heartbreaking and beautifully written.
+         8 |              6 |           4.7 | Deep, funny, and powerful.
+         9 |              7 |           4.4 | Melancholic and nostalgic.
+        10 |              8 |           4.5 | Beautiful and strange, classic Murakami.
+        11 |              9 |           5.0 | Mind-blowing perspective on history and evolution.
+        12 |             10 |           4.6 | Thought-provoking and a great sequel.
+        13 |              1 |           4.8 | My kids and I loved it. Great family reading.
+        14 |              1 |           4.2 | Enjoyable, but the hype made me expect more.
+        15 |              2 |           4.9 | A thrilling continuation of the story.
+        16 |              2 |           3.9 | Good but too similar to the first book.
+        17 |              3 |           5.0 | Incredible world-building and twists.
+        18 |              3 |           4.3 | Long, but worth the investment.
+        19 |              4 |           4.0 | Some slow parts but still strong.
+        20 |              4 |           3.8 | Too many characters to keep track of.
+        21 |              5 |           5.0 | Emotionally powerful and well-written.
+        22 |              5 |           4.4 | A masterpiece with rich storytelling.
+        23 |              6 |           4.6 | Sharp, honest, and important.
+        24 |              6 |           4.0 | Some pacing issues, but a great read.
+        25 |              7 |           4.7 | Beautiful and melancholic.
+        26 |              7 |           4.1 | Not for everyone, but I liked it.
+        27 |              8 |           4.8 | Mind-bending and poetic.
+        28 |              8 |           3.9 | Confusing at times, but interesting.
+        29 |              9 |           4.9 | Should be required reading for everyone.
+        30 |              9 |           4.7 | Brilliant synthesis of history.
+        31 |             10 |           4.8 | Fascinating ideas about the future.
+        32 |             10 |           4.2 | Less engaging than Sapiens but still great.
+        33 |              4 |           2.2 | Below average. Will not recommend
+(33 rows)
+
+BEGIN
+INSERT 0 1
+COMMIT
+
+$ psql -U santhosh -d presidio -f test.sql -W
+
+BEGIN
+INSERT 0 1
+psql:task-10-test.sql:11: ERROR:  duplicate key value violates unique constraint "authors_author_name_key"
+DETAIL:  Key (author_name)=(Ocean Vuong) already exists.
+psql:task-10-test.sql:15: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+psql:task-10-test.sql:19: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+psql:task-10-test.sql:23: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+psql:task-10-test.sql:27: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+psql:task-10-test.sql:31: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+psql:task-10-test.sql:35: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+psql:task-10-test.sql:52: ERROR:  current transaction is aborted, commands ignored until end of transaction block
+ROLLBACK
