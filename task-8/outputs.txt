@@ -1,0 +1,78 @@
+$ psql -U santhosh -d presidio -f commands.sql -W
+
+CREATE TABLE
+INSERT 0 47
+
+ sale_id |   seller_store    |    buyer_store     | sale_amount 
+---------+-------------------+--------------------+-------------
+       1 | GlobalMart        | GlobalMart - East  |        1200
+       2 | GlobalMart        | GlobalMart - West  |        1300
+       3 | GlobalMart        | TechArena          |        1500
+       4 | GlobalMart        | TechArena - Outlet |        1450
+       5 | GlobalMart - East | TechArena          |        1100
+       6 | GlobalMart - East | TechArena - Outlet |        1080
+       7 | GlobalMart - West | TechArena          |        1150
+       8 | GlobalMart - West | TechArena - Outlet |        1120
+       9 | TechArena         | TechArena - Outlet |        1000
+      10 | GlobalMart        | GlobalMart - East  |        1220
+      11 | GlobalMart        | GlobalMart - West  |        1320
+      12 | GlobalMart        | TechArena          |        1490
+      13 | GlobalMart        | TechArena - Outlet |        1460
+      14 | GlobalMart - East | TechArena          |        1110
+      15 | GlobalMart - East | TechArena - Outlet |        1090
+      16 | GlobalMart - West | TechArena          |        1160
+      17 | GlobalMart - West | TechArena - Outlet |        1130
+      18 | TechArena         | TechArena - Outlet |        1010
+      19 | GlobalMart        | TechArena          |        1400
+      20 | GlobalMart        | TechArena - Outlet |        1420
+      21 | GlobalMart - East | TechArena          |        1075
+      22 | GlobalMart - West | TechArena - Outlet |        1145
+      23 | TechArena         | TechArena - Outlet |         990
+      24 | GlobalMart - West | TechArena          |        1185
+      25 | GlobalMart        | GlobalMart - East  |        1270
+      26 | GlobalMart        | GlobalMart - West  |        1355
+      27 | GlobalMart        | TechArena          |        1440
+      28 | GlobalMart        | TechArena - Outlet |        1430
+      29 | GlobalMart - East | TechArena          |        1060
+      30 | GlobalMart - East | TechArena - Outlet |        1050
+      31 | GlobalMart - West | TechArena          |        1175
+      32 | GlobalMart - West | TechArena - Outlet |        1190
+      33 | TechArena         | TechArena - Outlet |        1040
+      34 | GlobalMart        | TechArena          |        1410
+      35 | GlobalMart - East | TechArena          |        1095
+      36 | GlobalMart - West | TechArena          |        1200
+      37 | TechArena         | TechArena - Outlet |         990
+      38 | GlobalMart        | TechArena - Outlet |        1390
+      39 | GlobalMart - East | TechArena - Outlet |        1070
+      40 | GlobalMart - West | TechArena - Outlet |        1160
+      41 | TechArena         | TechArena - Outlet |        1020
+      42 | GlobalMart        | GlobalMart - East  |        1230
+      43 | GlobalMart - West | TechArena          |        1195
+      44 | GlobalMart        | TechArena - Outlet |        1380
+      45 | TechArena         | TechArena - Outlet |         970
+      46 | GlobalMart - East | TechArena          |        1085
+      47 | GlobalMart        | TechArena          |        1455
+(47 rows)
+
+ seller_store | total_sales | average_sales 
+--------------+-------------+---------------
+ GlobalMart   |       26120 |         14191
+(1 row)
+
+ seller_store | total_sales | average_sales 
+--------------+-------------+---------------
+ GlobalMart   |       26120 |         14191
+(1 row)
+
+   parent_store    |    child_store     
+-------------------+--------------------
+ GlobalMart        | GlobalMart - West
+ GlobalMart        | TechArena
+ GlobalMart        | TechArena - Outlet
+ GlobalMart        | GlobalMart - East
+ GlobalMart - East | TechArena - Outlet
+ GlobalMart - East | TechArena
+ GlobalMart - West | TechArena - Outlet
+ GlobalMart - West | TechArena
+ TechArena         | TechArena - Outlet
+(9 rows)
