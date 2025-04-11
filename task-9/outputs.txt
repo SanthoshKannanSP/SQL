@@ -1,0 +1,68 @@
+$ psql -U santhosh -d presidio -f commands.sql -W
+
+CREATE TABLE
+CREATE TABLE
+INSERT 0 4
+ product_id |    product_name     | price | in_stock 
+------------+---------------------+-------+----------
+          1 | Wireless Mouse      |    25 |      100
+          2 | Mechanical Keyboard |    80 |      100
+          3 | USB-C Hub           |    45 |      100
+          4 | 27-inch Monitor     |   220 |      100
+(4 rows)
+
+CREATE PROCEDURE
+CREATE PROCEDURE
+psql:commands.sql:66: NOTICE:  Product Wireless Mouse updated successfully
+CALL
+psql:commands.sql:67: NOTICE:  Product 27-inch Monitor updated successfully
+CALL
+ transaction_id | product_id | quantity 
+----------------+------------+----------
+              1 |          1 |       40
+              2 |          4 |      100
+(2 rows)
+
+ product_id |    product_name     | price | in_stock 
+------------+---------------------+-------+----------
+          1 | Wireless Mouse      |    25 |       60
+          2 | Mechanical Keyboard |    80 |      100
+          3 | USB-C Hub           |    45 |      100
+          4 | 27-inch Monitor     |   220 |        0
+(4 rows)
+
+psql:commands.sql:72: NOTICE:  Inventory resetted!
+CALL
+ transaction_id | product_id | quantity 
+----------------+------------+----------
+              1 |          1 |       40
+              2 |          4 |      100
+(2 rows)
+
+ product_id |    product_name     | price | in_stock 
+------------+---------------------+-------+----------
+          1 | Wireless Mouse      |    25 |      100
+          2 | Mechanical Keyboard |    80 |      100
+          3 | USB-C Hub           |    45 |      100
+          4 | 27-inch Monitor     |   220 |      100
+(4 rows)
+
+psql:commands.sql:77: NOTICE:  Product Wireless Mouse updated successfully
+CALL
+psql:commands.sql:78: NOTICE:  Product 27-inch Monitor updated successfully
+CALL
+CREATE FUNCTION
+    product_name     | total_revenue 
+---------------------+---------------
+ Wireless Mouse      |          1800
+ Mechanical Keyboard |          8000
+ USB-C Hub           |          4500
+ 27-inch Monitor     |          6600
+(4 rows)
+
+CREATE FUNCTION
+ transaction_id |  product_name  | quantity | price | revenue 
+----------------+----------------+----------+-------+---------
+              1 | Wireless Mouse |       40 |    25 |    1000
+              3 | Wireless Mouse |       28 |    25 |     700
+(2 rows)
